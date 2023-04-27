@@ -1,0 +1,186 @@
+.header {
+    padding: 2rem 0;
+    position: relative;
+    &__wrapper {
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        ul {
+            gap: 2rem;
+            font-weight: 500;
+            color: $clr-gray;
+            cursor: pointer;
+        }
+        ul li {
+            position: relative;
+        }
+        ul li:hover {
+            color: #239782;
+            transition: .9s;
+        }
+        ul li:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -30%;
+            transform: translateX(-50%) scale(0);
+            -webkit-transform: translateX(-50%) scale(0);
+            -webkit-transform-origin: 50% 50% ;
+            transform-origin:  50% 50%;
+            width: 100%;
+            height: 2px;
+            background-color: $clr-primary;
+            -webkit-transition: transform 250ms;
+            transition: transform 250ms;
+            @include mediaQuery($break-md) {
+              display: none;
+            }
+        }
+        ul li:hover:after {
+            -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+        }
+        li {
+            margin-top: 0.8rem;
+        }
+        
+    }
+    nav {
+      
+      z-index: 1;
+      &.open {
+          ul {
+              right: -50%;
+              transition: 0.5s ease;
+              padding: 1rem;
+          }
+      }
+  }
+  nav ul li a{
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  nav ul {
+      gap: 2rem;
+      @include mediaQuery($break-md){
+          display: block !important;
+          position: absolute;
+          background-color: $clr-white;
+          right: calc(-100% - 3rem);
+          top: 6.2rem;
+          width: 100%;
+          height: 100vh;
+          transition: 0.5s ease;
+          li {
+              border-bottom: 1px solid $clr-white;
+              margin: 1rem 0;
+          }
+      }
+  }
+    .toggle__menu{
+      cursor: pointer;
+      z-index: 1;
+      display: none;
+      span {
+          transition: 0.5s ease;
+          background-color: $clr-primary;
+          height: 0.2rem;
+          width: 2rem;
+          display: block;
+          margin-bottom: 0.3rem;
+          border-radius: 2rem;
+      }
+      @include mediaQuery ($break-md){
+          display: block;
+      }
+  }
+  .toggle__menu.open span:nth-child(1){
+      transition: 0.5s ease;
+      transform: translate(-2px, 7.3px) rotate(45deg);
+  }
+  .toggle__menu.open span:nth-child(2){
+      opacity: 0;
+      transition: 0s;
+  }
+  .toggle__menu.open span:nth-child(3){
+      transition: 0.5s ease;
+      transform: translate(-2px, -9px) rotate(-45deg);
+  }
+    
+}
+
+.search-box{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    @include mediaQuery ($break-md) {
+      display: none;
+    }
+  }
+  .search-box.active{
+    width: 350px;
+  }
+  .search-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    outline: none;
+    padding: 0 30px 0 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .search-box input.active{
+    opacity: 1;
+  }
+  .search-box input::placeholder{
+    color: #a6a6a6;
+  }
+  .search-box .search-icon{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    background: #239782;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .search-box .search-icon.active{
+    right: 5px;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background: #239782;
+    color: #fff;
+    transform: translateY(-50%) rotate(360deg);
+  }
+  .search-box .cancel-icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #239782;
+    cursor: pointer;
+    transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .search-box .cancel-icon.active{
+    right: -30px;
+    transform: translateY(-50%) rotate(360deg);
+  }

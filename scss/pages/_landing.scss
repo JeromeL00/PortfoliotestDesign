@@ -1,0 +1,224 @@
+
+.banner {
+    &__wrapper {
+        @include mediaQuery ($break-md) {
+            display: block !important;
+            
+        }
+    }
+}
+
+.banner {
+    &__content {
+        width: 49%;
+        margin-right: auto;
+        gap: 2rem;
+        @include mediaQuery ($break-md) {
+            width: auto;
+        }
+    }
+    h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 5;
+    }
+    span {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+.banner__wrapper img{
+    animation: floatImage 4s ease-in-out infinite;
+    @include mediaQuery ($break-md) {
+        margin-top: 5rem;
+    }
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.bg--transparent {
+    background-color: transparent !important;
+    color: $clr-primary !important;
+    border: 1px solid $clr-primary !important;
+    &:hover {
+        background-color: $clr-primary !important;
+        color: $clr-white !important;
+    }
+
+}
+
+.icons ul li a i {
+    color: $clr-primary;
+    font-size: 1.5rem;
+    transition: 0.6s;
+    &:hover {
+        color: $clr-gray;
+    }
+}
+
+.icons {
+    h4{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    @include mediaQuery ($break-md) {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.aboutMe {
+    background-color: #f2f2f2;
+    &__content {
+        h3 {
+            font-size: 1.5rem;
+        }
+        a {
+            text-align: center;
+            color: $clr-primary;
+            transition: 0.5s;
+            font-size: 1rem;
+            background: transparent;
+            border: solid 1px $clr-primary;
+            &:hover {
+                background-color: $clr-secondary;
+                color: $clr-white;
+            }
+        }
+        @include mediaQuery($break-md) {
+            text-align: center !important;
+            margin-top: 3rem;
+        }
+        
+    }
+    &__wrapper {
+        img {
+            height: 449px !important;
+            width: 449px;
+        }
+        @include mediaQuery($break-md) {
+            display: block !important;
+         }
+    }
+    img {
+        height: 500px;
+    }
+    
+     
+}
+     
+
+.skills {
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.devApp {
+    ul li i {
+        font-size: 2rem;
+        color: $clr-gray;
+        
+    }
+    ul li i:hover {
+        transform: scale(1.20);
+    }
+}
+
+.experience{
+    &__services {
+        @include mediaQuery($break-md) {
+            display: block !important;
+        }
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    &__card {
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.10);
+        }
+        position: relative;
+        img {
+            height: 380px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 3rem;
+        }
+
+        &::after {
+            visibility: hidden;
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0.4rem;
+            font-size: 1rem;
+            left: 0;
+            right: 0;
+            color: white;
+            background: #2397828e;
+            padding: 2rem;
+            text-align: center;
+            border-bottom-right-radius: 3rem;
+            border-bottom-left-radius: 3rem;
+        }
+        &:hover::after {
+            visibility: visible;
+            content: attr(data-hover);
+
+        }
+        
+    }
+    &__wrapper {
+        @include mediaQuery($break-md) {
+            display: block !important;
+            padding: 3rem;
+        }
+    }
+    li {
+        list-style: none;
+        border-left: solid 3px $clr-primary;
+        padding-left: 2rem;
+        cursor:default;
+    }
+    
+}
+
+.footer__wrapper {
+    ul {
+        @include mediaQuery($break-md) {
+            justify-content: center;
+        }
+    }
+    @include mediaQuery($break-md) {
+        display: block !important;
+        text-align: center;
+    }
+}
+.footer p {
+    cursor: default;
+    @include mediaQuery($break-md) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+}

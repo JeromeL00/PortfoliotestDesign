@@ -1,0 +1,13 @@
+.footer {
+    ul li a i {
+        font-size: 1.3rem;
+        color: white;
+        &:hover {
+            color: $clr-primary;
+        }
+        transition: 0.3s;
+    }
+    p {
+        color: $clr-white;
+    }
+}

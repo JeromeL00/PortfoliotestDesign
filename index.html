@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</head>
+<body>
+   <header class="header">
+    
+    <div class="container">
+        
+
+        <div class="header__wrapper d--flex justify--between" style="align-items: center;">
+            <h2 class="text--center">J<span class="text--primary">E</span></h2>
+
+            <nav class="nav">
+                <ul class="d--flex">
+                    <li><a class="active" href="index.html"></a>Home</li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#"></a>Portfolio</li>
+                    <li><a href="#"></a>Contact</li>
+                    
+                </ul>
+                
+            </nav>
+            <div class="search">
+              <div class="search-box">
+                  <input type="text" placeholder="Type to search..">
+                  <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+            <div class="cancel-icon">
+                    <i class="fas fa-times"></i>
+                  </div>
+            <div class="search-data">
+            </div>
+            </div>
+            <script>
+                  const searchBox = document.querySelector(".search-box");
+                  const searchBtn = document.querySelector(".search-icon");
+                  const cancelBtn = document.querySelector(".cancel-icon");
+                  const searchInput = document.querySelector("input");
+                  const searchData = document.querySelector(".search-data");
+                  searchBtn.onclick =()=>{
+                    searchBox.classList.add("active");
+                    searchBtn.classList.add("active");
+                    searchInput.classList.add("active");
+                    cancelBtn.classList.add("active");
+                    searchInput.focus();
+                    if(searchInput.value != ""){
+                      var values = searchInput.value;
+                      searchData.classList.remove("active");
+                      searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+                    }else{
+                      searchData.textContent = "";
+                    }
+                  }
+                  cancelBtn.onclick =()=>{
+                    searchBox.classList.remove("active");
+                    searchBtn.classList.remove("active");
+                    searchInput.classList.remove("active");
+                    cancelBtn.classList.remove("active");
+                    searchData.classList.toggle("active");
+                    searchInput.value = "";
+                  }
+                </script>
+          </div>
+
+            <div class="toggle__menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+    </div>
+   </header>
+
+   <section class="banner py--2">
+    <div class="container">
+
+        <div class="banner__wrapper d--flex justify--between">
+            <div class="banner__content">
+                <h4 class="text--gray">Hello there, I'm</h4>
+            <h1 class="text--primary">Mark Jerome Laccay</h1>
+            <p class="text--gray">And I am a <span class="multiple-text text--primary"></span></p>
+            <div class="botton">
+                <a class="btn bg--primary bg--transparent" href="#">Contact me</a>
+                <a class="btn bg--primary ml--2" href="#">Download CV</a>
+            </div>
+            
+            
+            </div>
+            <img src="img/Profile (1).png" alt="">
+        </div>
+        <div class="icons mb--3">
+          <h4 class="text--gray mb--1">Follow Me On:</h4>
+            <ul class="d--flex gap--1 ">
+              <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+          
+        </div>
+    </div>
+   
+   </section>
+
+   <section class="aboutMe py--5">
+    <div class="container">
+
+      <div class="aboutMe__wrapper d--flex gap--10">
+        <img src="img/prof.png" alt="">
+        <div class="aboutMe__content" style="text-align: left;">
+          <h3 class="text--primary mb--3">About <span class="text--gray">Me</span></h3>
+          <p class="mb--5">I am seeking a job where I can work with my knowledge
+            and skills. A workplace where I know I’ll be able to explore
+            and improve myself, worthy of my hard work and passion.
+            I am a fast learner, active, approachable, and an effective
+            communicator.
+            <br>
+            <br>
+            
+            Wishing you all a good and blessed day!
+            <br>
+            <br>
+            Thank you.</p>
+
+            <small><a href="#" style="padding-left: 0.8rem; padding-right: 0.8rem; padding-top: 0.3rem; padding-bottom: 0.3rem; border-radius: 2rem;">Read more...</a></small>
+        </div>
+
+        
+
+      </div>
+    </div>
+   </section>
+
+   <section class="skills py--2 text--center bg--primary">
+    <div class="container">
+
+      <h3 class="text--light mb--2">Skilled <span class="text--gray">In</span></h3>
+
+      <div class="devApp">
+        <ul class="d--flex gap--3" style="justify-content: center;">
+          <li><i class="fa-brands fa-figma"></i></li>
+          <li><i class="fa-solid fa-code"></i></li>
+          <li><i class="fa-brands fa-wordpress"></i></li>
+          <li><i class="fa-brands fa-wix"></i></li>
+        </ul>
+      </div>
+    </div>
+   </section>
+
+   <section class="experience py--5">
+    <div class="container">
+      <h3 class="text--primary text--center mb--5">My <span class="text--gray">Experiences</span></h3>
+      <div class="experience__wrapper gap--3 mb--3" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+
+        <div class="experience__card mb--2" data-hover="Web Development HTML/CSS">
+          <img src="img/webdev.jpg" alt="">
+        </div>
+        <div class="experience__card mb--2" data-hover="Responsive Web Design">
+          <img src="img/responsiveweb.jpg" alt="">
+        </div>
+        <div class="experience__card mb--2" data-hover="Converting Website To Wordpress">
+          <img src="img/html (1).jpg" alt="">
+        </div>
+        <div class="experience__card mb--2" data-hover="Web Development With Tailwind">
+          <img src="img/tw (1).jpg" alt="">
+        </div>
+        
+      </div>
+      <div class="experience__services d--flex justify--between">
+        <li>Web Development</li>
+        <li>Responsive Web Design</li>
+        <li>HTML/CSS Website To Wordpress</li>
+        <li>Tailwind Web Development</li>
+      </div>
+    </div>
+   </section>
+
+   <footer class="footer py--2 bg--gray">
+    <div class="container">
+      <div class="footer__wrapper d--flex justify--between">
+        <ul class="d--flex gap--1 ">
+          <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+        <p><small>632 Purok 7, Brgy. Bautista San Pablo City Laguna 4000</small></p>
+        <p>
+          &copy; My Portfolio
+        </p>
+      </div>
+    </div>
+   </footer>
+
+   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+   <script>
+    const typed = new Typed('.multiple-text', {
+      strings: ['Future Web Developer', 'Future Web Designer'],
+      typeSpeed: 100,
+      backSpeed: 0,
+      fadeOut: true,
+      backDelay: 1000,
+      loop: true
+
+    });
+  </script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+  ScrollReveal({ 
+    //reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200 
+    });
+    ScrollReveal().reveal('.banner__content', { origin: 'top' });
+    ScrollReveal().reveal('.banner__content h1', { origin: 'left' });
+    ScrollReveal().reveal('img', { origin: 'bottom' });
+    ScrollReveal().reveal('.aboutMe__content p', { origin: 'right' });   
+    ScrollReveal().reveal('.aboutMe__content h3', { origin: 'top' });   
+    ScrollReveal().reveal('.aboutMe__content small', { origin: 'bottom' });   
+</script>
+
+<script>
+
+  const nav = document.querySelector(".nav");
+  const toggle__menu = document.querySelector(".toggle__menu");
+
+  toggle__menu.addEventListener('click', ()=>{
+        toggle__menu.classList.toggle("open");
+        nav.classList.toggle("open");
+  });
+
+</script>
+
+</body>
+</html>
