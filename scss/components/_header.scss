@@ -1,24 +1,35 @@
 .header {
-    padding: 2rem 0;
-    position: relative;
+    padding: 1.5rem 0;
+    padding-bottom: 1rem;
+    position: fixed;
+    width: 100%;
+    background-color: $clr-black;
+    z-index: 1;
     &__wrapper {
         h2 {
+            color: $clr-white;
             font-size: 2rem;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
         }
         ul {
             gap: 2rem;
             font-weight: 500;
-            color: $clr-gray;
+            color: $clr-white;
             cursor: pointer;
         }
         ul li {
             position: relative;
         }
-        ul li:hover {
-            color: #239782;
-            transition: .9s;
+        ul li a:hover {
+            color: $clr-primary;
+            transition: .5s;
+            @include mediaQuery ($break-md) {
+                color: $clr-white;
+            }
+        }
+        .active {
+            color: $clr-primary;
         }
         ul li:after {
             content: '';
@@ -45,40 +56,93 @@
         li {
             margin-top: 0.8rem;
         }
-        
+        span {
+          color: $clr-primary;
+        }
+        .commentBubble {
+            a {
+                position: relative;
+                padding: 3px 0.7rem;
+                background-color: $clr-primary;
+                border-radius: 4rem;
+                display: inline-block;
+                font-size: 2rem;
+                top: 33rem;
+                left: 44.2rem;
+                transition: 0.4s;
+                cursor: pointer;
+                color: $clr-black;
+                &:hover {
+                    padding: 3px 0.7rem;
+                    background-color: $clr-black;
+                    color: $clr-primary;
+                }
+            }
+            
+            @include mediaQuery ($break-md) {
+                left: 14.2rem;
+            }
+        }
     }
     nav {
       
       z-index: 1;
       &.open {
           ul {
-              right: -50%;
-              transition: 0.5s ease;
-              padding: 1rem;
+            right: 0%;
+            transition: 0.5s ease;
+            padding: 1rem 0px;
+            text-align: center;
           }
       }
   }
   nav ul li a{
       color: white;
-      font-weight: bold;
-      font-size: 1.1rem;
+  }
+
+  nav a {
+    display: block;
   }
   nav ul {
-      gap: 2rem;
-      @include mediaQuery($break-md){
+    gap: 2rem;
+    @include mediaQuery($break-md){
           display: block !important;
           position: absolute;
-          background-color: $clr-white;
+          background-color: $clr-gray;
           right: calc(-100% - 3rem);
-          top: 6.2rem;
+          top: 5.9rem;
           width: 100%;
           height: 100vh;
           transition: 0.5s ease;
           li {
-              border-bottom: 1px solid $clr-white;
-              margin: 1rem 0;
+              padding: 1rem;
+              &:hover {
+                background-color: $clr-black;
+              }
           }
+          
       }
+  }
+  .socialLinks {
+    display: none;
+    
+    li a i {
+        font-size: 1.5rem;
+        color: $clr-white;
+        
+    }
+      
+    
+    @include mediaQuery($break-md) {
+        position: absolute;
+        right: calc(-17% - 3rem);
+        top: 23.9rem;
+        width: 100%;
+        height: 11vh;
+        display: flex !important;
+    }
+    
+    
   }
     .toggle__menu{
       cursor: pointer;
@@ -109,78 +173,14 @@
       transition: 0.5s ease;
       transform: translate(-2px, -9px) rotate(-45deg);
   }
-    
 }
 
-.search-box{
-    position: relative;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    @include mediaQuery ($break-md) {
-      display: none;
+.footerimg{
+    img {
+        position: relative;
+        left: 56rem;
+        bottom: -8rem;
+        height: 161px;
+        width: 451px;
     }
-  }
-  .search-box.active{
-    width: 350px;
-  }
-  .search-box input{
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 50px;
-    background: #fff;
-    outline: none;
-    padding: 0 30px 0 20px;
-    font-size: 18px;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .search-box input.active{
-    opacity: 1;
-  }
-  .search-box input::placeholder{
-    color: #a6a6a6;
-  }
-  .search-box .search-icon{
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 50px;
-    width: 50px;
-    background: #239782;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 22px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .search-box .search-icon.active{
-    right: 5px;
-    height: 50px;
-    line-height: 50px;
-    width: 50px;
-    font-size: 20px;
-    background: #239782;
-    color: #fff;
-    transform: translateY(-50%) rotate(360deg);
-  }
-  .search-box .cancel-icon{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 25px;
-    color: #239782;
-    cursor: pointer;
-    transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .search-box .cancel-icon.active{
-    right: -30px;
-    transform: translateY(-50%) rotate(360deg);
-  }
+}

@@ -3,6 +3,7 @@ $colors: (
     "dark" : $clr-black,
     "light" : $clr-white,
     "gray" : $clr-gray,
+    "green" : $clr-secondary,
 );
 
 @each $key , $val in $colors {
@@ -89,8 +90,17 @@ $alignments: (
     .ml--#{$i} {
       margin-left: $i + rem;
     }
+    .mt--#{$i} {
+      margin-top: $i + rem;
+    }
+    .mr--#{$i} {
+      margin-right: $i + rem;
+    }
     .gap--#{$i} {
       gap: $i + rem;
+    }
+    .wid--#{$i} {
+      width: $i + rem;
     }
 }
     

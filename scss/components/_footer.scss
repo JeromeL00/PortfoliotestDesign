@@ -1,13 +1,65 @@
 .footer {
-    ul li a i {
-        font-size: 1.3rem;
-        color: white;
-        &:hover {
-            color: $clr-primary;
+    &__wrapper {
+        position: relative;
+        top: 0.5rem;
+        cursor: default;
+        a {
+            position: relative;
+            font-family: $ff-secondary;
+            color: $clr-white;
         }
-        transition: 0.3s;
+        a:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -30%;
+            transform: translateX(-50%) scale(0);
+            -webkit-transform: translateX(-50%) scale(0);
+            -webkit-transform-origin: 50% 50% ;
+            transform-origin:  50% 50%;
+            width: 50%;
+            height: 2px;
+            background-color: $clr-primary;
+            -webkit-transition: transform 250ms;
+            transition: transform 250ms;
+        }
+        a:hover:after {
+            -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+        }
+        .social {
+            @include mediaQuery($break-md) {
+                display: block !important;
+            }
+        }
+        .links {
+            @include mediaQuery($break-md) {
+                position: relative;
+                bottom: 1.5rem;
+            }
+        }
+        small {
+            @include mediaQuery($break-md) {
+                position: relative;
+                top: 2rem;
+            }
+        }
     }
-    p {
-        color: $clr-white;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+.footer__wrapper {
+    ul {
+        @include mediaQuery($break-md) {
+            justify-content: center;
+        }
+    }
+    @include mediaQuery($break-md) {
+        display: block !important;
+        text-align: center;
     }
 }
