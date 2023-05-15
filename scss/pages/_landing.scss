@@ -3,7 +3,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-.banner {
+.banner {   
     cursor: default;
     &__wrapper {
         @include mediaQuery ($break-md) {
@@ -345,13 +345,86 @@ body {
     span {
         color: $clr-primary;
     }
+    p {
+        @include mediaQuery ($break-md) {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+    }
     &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include mediaQuery ($break-md) {
+            display: block;
+            margin-right: 3.5rem;
+        }
         i {
+
             color: $clr-primary;
             font-size: 2rem;
         }
         p {
             color: $clr-white;
+        }
+
+    }
+    .contact__form {
+        text-align: right;
+        .forms {
+            gap: 4.5rem;
+            @include mediaQuery ($break-md) {
+                display: block;
+            }
+        }
+        .inputGroup {
+            margin-bottom: 0.7rem;
+            textarea {
+                width: 94%;
+                padding: 15px 1.5rem;
+                resize: none;
+                font-family: $ff-primary;
+                font-size: 1rem;
+                border-radius: 5px;
+                height: 10rem;
+                border: none;
+                background-color: $clr-gray;
+                color: $clr-white;
+                @include mediaQuery ($break-md) {
+                    width: 102%;
+                }
+            }
+        }
+        input {
+            padding: 15px 1.5rem;
+            width: 102%;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: $clr-gray;
+            color: $clr-white;
+            border: none;
+        }
+        button {
+            padding: 15px 1.5rem;
+            width: 50%;
+            position: relative;
+            right: 8.7rem;
+            border-radius: 2rem;
+            background-color: $clr-secondary;
+            transition: all 0.5s;
+            &:hover {
+                background-color: $clr-primary;
+            }
+            
+            a {
+                font-size: 1rem;
+                color: $clr-white;
+                font-weight: 600;
+                display: block;
+            }
+            @include mediaQuery ($break-md) {
+                width: 63%;
+                margin-left: 15rem;
+            }
         }
     }
 }
@@ -925,3 +998,51 @@ body {
     }
 
 }
+
+
+/*------Preloader----------*/
+
+/*.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $clr-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px; 
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+}
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(180deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(360deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% {height: 0%;}
+    25% {height: 0%;}
+    50% {height: 100%;}
+    75% {height: 100%;}
+    100% {height: 0%;}
+}*/

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
+    <title>Je_Portfolio Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -25,7 +25,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="contacts.html" class="activee">Contact</a></li>
                     <div class="socialLinks d--flex ">
                       <li><a href="facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
                       <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
@@ -55,26 +55,63 @@
     
 </section>
 
-<section class="contact">
+<section class="contact ">
   <div class="container">
-    <h1 class="mb--2">Contact <span>Me!</span></h1>
-    <div class="contact__wrapper">
-      <div class="d--flex align--center gap--1 mb--2">
-        <i class="fa-solid fa-phone"></i>
-        <p>+63 945 572 0537</p>
+  
+    <h1 class="">Contact <span>Me!</span></h1>
+    <p class="text--light">Let's Work Together!</p>
+    <div class="contact__wrapper align--center mb--5">
+      <div class="contact__info">
+        <div class="d--flex align--center gap--1 mb--2">
+          <i class="fa-solid fa-phone"></i>
+          <p>+63 945 572 0537</p>
+        </div>
+        <div class="d--flex align--center gap--1 mb--2">
+          <i class="fa-solid fa-envelope"></i>
+          <p>jeromelaccay183@gmail.com</p>
+        </div>
+        <div class="d--flex align--center gap--1 mb--2">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <p>632 Purok 7, Brgy. Bautista <br> 
+            San Pablo City, Laguna 4000</p> 
+        </div>
       </div>
-      <div class="d--flex align--center gap--1 mb--2">
-        <i class="fa-solid fa-envelope"></i>
-        <p>jeromelaccay183@gmail.com</p>
-      </div>
-      <div class="d--flex align--center gap--1 mb--2">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <p>632 Purok 7, Brgy. Bautista <br> 
-          San Pablo City, Laguna 4000</p> 
+      <div class="contact__form">
+        <form action="">
+  
+          <div class=" forms d--flex">
+            <div class="inputGroup">
+            <label for=""></label>
+            <input id="name" type="text" placeholder="Name">
+          </div>
+          <div class="inputGroup">
+            <label for=""></label>
+            <input id="email" type="text" placeholder="Email">
+          </div>
+        </div>
+          <div class="forms d--flex">
+            <div class="inputGroup">
+              <label for=""></label>
+              <input type="text" placeholder="Mobile Number">
+            </div>
+            <div class="inputGroup">
+              <label for=""></label>
+              <input type="text" placeholder="Subject">
+            </div>
+          </div>
+          <div class="inputGroup">
+            <label for=""></label>
+            <textarea name="message" id="message" placeholder="Message"></textarea>
+          </div>
+        </form>
+        <button>
+          <a href="#">Send Message</a>
+        </button>
+        
       </div>
     </div>
   </div>
-</section>
+    </section>
 
 
 

@@ -33,6 +33,11 @@ a {
   background-color: #142E2E;
   z-index: 1;
 }
+@media screen and (max-width: 870px) {
+  .header__wrapper {
+    align-items: center;
+  }
+}
 .header__wrapper h2 {
   color: #FFFFFF;
   font-size: 2rem;
@@ -57,14 +62,24 @@ a {
     color: #FFFFFF;
   }
 }
-.header__wrapper .active {
+.header__wrapper .active a {
   color: #00FFD2;
+  border-bottom: solid 2px #00FFD2;
+}
+@media screen and (max-width: 870px) {
+  .header__wrapper .active a {
+    display: inline-block;
+  }
+}
+.header__wrapper .activee {
+  color: #00FFD2;
+  border-bottom: solid 2px #00FFD2;
 }
 .header__wrapper ul li:after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -30%;
+  bottom: 1%;
   transform: translateX(-50%) scale(0);
   -webkit-transform: translateX(-50%) scale(0);
   transform-origin: 50% 50%;
@@ -108,6 +123,8 @@ a {
 @media screen and (max-width: 870px) {
   .header__wrapper .commentBubble {
     left: 14.2rem;
+    bottom: -35rem;
+    position: relative;
   }
 }
 .header nav {
@@ -121,9 +138,6 @@ a {
 }
 .header nav ul li a {
   color: white;
-}
-.header nav a {
-  display: block;
 }
 .header nav ul {
   gap: 2rem;
@@ -596,12 +610,92 @@ body {
 .contact span {
   color: #00FFD2;
 }
+@media screen and (max-width: 870px) {
+  .contact p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 870px) {
+  .contact__wrapper {
+    display: block;
+    margin-right: 3.5rem;
+  }
+}
 .contact__wrapper i {
   color: #00FFD2;
   font-size: 2rem;
 }
 .contact__wrapper p {
   color: #FFFFFF;
+}
+.contact .contact__form {
+  text-align: right;
+}
+.contact .contact__form .forms {
+  gap: 4.5rem;
+}
+@media screen and (max-width: 870px) {
+  .contact .contact__form .forms {
+    display: block;
+  }
+}
+.contact .contact__form .inputGroup {
+  margin-bottom: 0.7rem;
+}
+.contact .contact__form .inputGroup textarea {
+  width: 94%;
+  padding: 15px 1.5rem;
+  resize: none;
+  font-family: "Poppins", "sans-serif";
+  font-size: 1rem;
+  border-radius: 5px;
+  height: 10rem;
+  border: none;
+  background-color: #343D3C;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 870px) {
+  .contact .contact__form .inputGroup textarea {
+    width: 102%;
+  }
+}
+.contact .contact__form input {
+  padding: 15px 1.5rem;
+  width: 102%;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #343D3C;
+  color: #FFFFFF;
+  border: none;
+}
+.contact .contact__form button {
+  padding: 15px 1.5rem;
+  width: 50%;
+  position: relative;
+  right: 8.7rem;
+  border-radius: 2rem;
+  background-color: #2EBAA1;
+  transition: all 0.5s;
+}
+.contact .contact__form button:hover {
+  background-color: #00FFD2;
+}
+.contact .contact__form button a {
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  display: block;
+}
+@media screen and (max-width: 870px) {
+  .contact .contact__form button {
+    width: 63%;
+    margin-left: 15rem;
+  }
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
@@ -1143,6 +1237,51 @@ body {
   background-color: #00FFD2;
 }
 
+/*------Preloader----------*/
+/*.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $clr-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px; 
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+}
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(180deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(360deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% {height: 0%;}
+    25% {height: 0%;}
+    50% {height: 100%;}
+    75% {height: 100%;}
+    100% {height: 0%;}
+}*/
 .bg--primary {
   background-color: #00FFD2;
 }
@@ -1329,6 +1468,10 @@ body {
   padding: 1rem 0;
 }
 
+.px--1 {
+  padding: 0 1rem;
+}
+
 .my--1 {
   margin: 1rem 0;
 }
@@ -1363,6 +1506,10 @@ body {
 
 .py--2 {
   padding: 2rem 0;
+}
+
+.px--2 {
+  padding: 0 2rem;
 }
 
 .my--2 {
@@ -1401,6 +1548,10 @@ body {
   padding: 3rem 0;
 }
 
+.px--3 {
+  padding: 0 3rem;
+}
+
 .my--3 {
   margin: 3rem 0;
 }
@@ -1435,6 +1586,10 @@ body {
 
 .py--4 {
   padding: 4rem 0;
+}
+
+.px--4 {
+  padding: 0 4rem;
 }
 
 .my--4 {
@@ -1473,6 +1628,10 @@ body {
   padding: 5rem 0;
 }
 
+.px--5 {
+  padding: 0 5rem;
+}
+
 .my--5 {
   margin: 5rem 0;
 }
@@ -1507,6 +1666,10 @@ body {
 
 .py--6 {
   padding: 6rem 0;
+}
+
+.px--6 {
+  padding: 0 6rem;
 }
 
 .my--6 {
@@ -1545,6 +1708,10 @@ body {
   padding: 7rem 0;
 }
 
+.px--7 {
+  padding: 0 7rem;
+}
+
 .my--7 {
   margin: 7rem 0;
 }
@@ -1579,6 +1746,10 @@ body {
 
 .py--8 {
   padding: 8rem 0;
+}
+
+.px--8 {
+  padding: 0 8rem;
 }
 
 .my--8 {
@@ -1617,6 +1788,10 @@ body {
   padding: 9rem 0;
 }
 
+.px--9 {
+  padding: 0 9rem;
+}
+
 .my--9 {
   margin: 9rem 0;
 }
@@ -1651,6 +1826,10 @@ body {
 
 .py--10 {
   padding: 10rem 0;
+}
+
+.px--10 {
+  padding: 0 10rem;
 }
 
 .my--10 {

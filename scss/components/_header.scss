@@ -6,6 +6,9 @@
     background-color: $clr-black;
     z-index: 1;
     &__wrapper {
+        @include mediaQuery ($break-md) {
+            align-items: center;
+        }
         h2 {
             color: $clr-white;
             font-size: 2rem;
@@ -29,13 +32,27 @@
             }
         }
         .active {
-            color: $clr-primary;
+            a {
+                color: $clr-primary;
+            border-bottom: solid 2px $clr-primary;
+            @include mediaQuery ($break-md) {
+                display: inline-block;
+            }
+            }
+            
         }
+        .activee {
+            color: $clr-primary;
+            border-bottom: solid 2px $clr-primary;
+            
+        }
+        
+        
         ul li:after {
             content: '';
             position: absolute;
             left: 50%;
-            bottom: -30%;
+            bottom: 1%;
             transform: translateX(-50%) scale(0);
             -webkit-transform: translateX(-50%) scale(0);
             -webkit-transform-origin: 50% 50% ;
@@ -81,6 +98,8 @@
             
             @include mediaQuery ($break-md) {
                 left: 14.2rem;
+                bottom: -35rem;
+                position: relative;
             }
         }
     }
@@ -99,10 +118,7 @@
   nav ul li a{
       color: white;
   }
-
-  nav a {
-    display: block;
-  }
+  
   nav ul {
     gap: 2rem;
     @include mediaQuery($break-md){
