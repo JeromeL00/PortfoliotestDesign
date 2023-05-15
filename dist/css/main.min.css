@@ -121,10 +121,10 @@ a {
   color: #00FFD2;
 }
 @media screen and (max-width: 870px) {
-  .header__wrapper .commentBubble {
-    left: 14.2rem;
-    bottom: -35rem;
+  .header__wrapper .commentBubble a {
     position: relative;
+    left: 15rem;
+    top: 34.5rem;
   }
 }
 .header nav {

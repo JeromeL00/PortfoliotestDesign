@@ -94,13 +94,15 @@
                     background-color: $clr-black;
                     color: $clr-primary;
                 }
+                @include mediaQuery ($break-md) {
+                    position: relative;
+                    left: 15rem;
+                    top: 34.5rem;
+                    
+                }
             }
             
-            @include mediaQuery ($break-md) {
-                left: 14.2rem;
-                bottom: -35rem;
-                position: relative;
-            }
+            
         }
     }
     nav {
@@ -118,7 +120,7 @@
   nav ul li a{
       color: white;
   }
-  
+
   nav ul {
     gap: 2rem;
     @include mediaQuery($break-md){
