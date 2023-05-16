@@ -466,10 +466,10 @@ body {
   position: absolute;
   bottom: 0px;
   font-size: 1rem;
-  left: 9.7rem;
+  left: 152px;
   color: white;
   background: #142E2E;
-  padding: 42px;
+  padding: 39px;
   top: 0px;
   text-align: center;
   font-family: "Inder", sans-serif;
@@ -498,8 +498,8 @@ body {
   left: 154px;
 }
 .skills__wrapper .figmaWeb .icon:nth-child(2)::after {
-  left: -154px;
-  right: 155px;
+  left: -152px;
+  right: 152px;
   padding-right: 22px;
   padding-left: 25px;
   padding-top: 53px;
@@ -512,9 +512,15 @@ body {
 }
 .skills__wrapper .figmaWeb .icon:nth-child(1) {
   position: relative;
+  left: 2px;
 }
 .skills__wrapper .figmaWeb .icon:nth-child(1)::after {
   padding: 53px;
+}
+@media screen and (max-width: 870px) {
+  .skills__wrapper .figmaWeb .icon:nth-child(1)::after {
+    left: 150px;
+  }
 }
 .skills__wrapper .figmaWeb .icon:nth-child(1) i {
   position: relative;
@@ -523,13 +529,24 @@ body {
 }
 .skills__wrapper .respWp .icon:nth-child(2) {
   position: relative;
-  right: -9.7rem;
+  left: 149px;
+}
+@media screen and (max-width: 870px) {
+  .skills__wrapper .respWp .icon:nth-child(2) {
+    left: 154px;
+  }
 }
 .skills__wrapper .respWp .icon:nth-child(2)::after {
-  left: -159px;
-  right: 155px;
+  left: -154px;
+  right: 154px;
   padding: 42px;
   padding-top: 65px;
+}
+@media screen and (max-width: 870px) {
+  .skills__wrapper .respWp .icon:nth-child(2)::after {
+    left: -152px;
+    right: 152px;
+  }
 }
 .skills__wrapper .respWp .icon:nth-child(2) i {
   position: relative;
@@ -537,11 +554,22 @@ body {
 }
 .skills__wrapper .respWp .icon:nth-child(1) {
   position: relative;
-  left: -3px;
+  left: -4px;
+}
+@media screen and (max-width: 870px) {
+  .skills__wrapper .respWp .icon:nth-child(1) {
+    left: 2px;
+  }
 }
 .skills__wrapper .respWp .icon:nth-child(1)::after {
   padding-top: 54px;
   padding-right: 34px;
+  left: 153px;
+}
+@media screen and (max-width: 870px) {
+  .skills__wrapper .respWp .icon:nth-child(1)::after {
+    left: 151px;
+  }
 }
 .skills__wrapper .respWp .icon:nth-child(1) i {
   position: relative;

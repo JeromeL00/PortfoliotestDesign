@@ -194,10 +194,10 @@ body {
                 position: absolute;
                 bottom: 0px;
                 font-size: 1rem;
-                left: 9.7rem;
+                left: 152px;
                 color: white;
                 background: #142E2E;
-                padding: 42px;
+                padding: 39px;
                 top: 0px;
                 text-align: center;
                 font-family: $ff-secondary;
@@ -232,8 +232,8 @@ body {
             position: relative;
             left: 154px;
             &::after {
-                left: -154px;
-                right: 155px;
+                left: -152px;
+                right: 152px;
                 padding-right: 22px;
                 padding-left: 25px;
                 padding-top: 53px;
@@ -247,8 +247,12 @@ body {
             }
         .figmaWeb .icon:nth-child(1) {
             position: relative;
+            left: 2px;
             &::after {
                 padding: 53px;
+                @include mediaQuery ($break-md) {
+                    left: 150px;
+                }
             }
                 
             i {
@@ -259,12 +263,19 @@ body {
         }
         .respWp .icon:nth-child(2) {
             position: relative;
-            right: -9.7rem;
+            left: 149px;
+            @include mediaQuery($break-md) {
+                left: 154px;
+            }
             &::after {
-                left: -159px;
-                right: 155px;
+                left: -154px;
+                right: 154px;
                 padding: 42px;
                 padding-top: 65px;
+                @include mediaQuery($break-md) {
+                    left: -152px;
+                    right: 152px;
+                }
             }
             i {
                 position: relative;
@@ -273,10 +284,17 @@ body {
         }
         .respWp .icon:nth-child(1) {
             position: relative;
-            left: -3px;
+            left: -4px;
+            @include mediaQuery($break-md) {
+                left: 2px;
+            }
             &::after {
                 padding-top: 54px;
                 padding-right: 34px;
+                left: 153px;
+                @include mediaQuery($break-md) {
+                    left: 151px;
+                }
             }
             i {
                 position: relative;
