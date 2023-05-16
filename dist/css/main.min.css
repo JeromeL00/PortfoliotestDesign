@@ -673,28 +673,29 @@ body {
   color: #FFFFFF;
   border: none;
 }
-.contact .contact__form button {
+.contact .contact__form .btn {
   padding: 15px 1.5rem;
   width: 50%;
   position: relative;
-  right: 8.7rem;
+  right: -8rem;
   border-radius: 2rem;
   background-color: #2EBAA1;
   transition: all 0.5s;
 }
-.contact .contact__form button:hover {
+.contact .contact__form .btn:hover {
   background-color: #00FFD2;
 }
-.contact .contact__form button a {
+.contact .contact__form .btn a {
   font-size: 1rem;
   color: #FFFFFF;
   font-weight: 600;
   display: block;
+  text-align: center;
 }
 @media screen and (max-width: 870px) {
-  .contact .contact__form button {
+  .contact .contact__form .btn {
     width: 63%;
-    margin-left: 15rem;
+    margin-left: -3rem;
   }
 }
 

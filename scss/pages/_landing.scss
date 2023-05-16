@@ -403,11 +403,11 @@ body {
             color: $clr-white;
             border: none;
         }
-        button {
+        .btn {
             padding: 15px 1.5rem;
             width: 50%;
             position: relative;
-            right: 8.7rem;
+            right: -8rem;
             border-radius: 2rem;
             background-color: $clr-secondary;
             transition: all 0.5s;
@@ -420,10 +420,11 @@ body {
                 color: $clr-white;
                 font-weight: 600;
                 display: block;
+                text-align: center;
             }
             @include mediaQuery ($break-md) {
                 width: 63%;
-                margin-left: 15rem;
+                margin-left: -3rem;
             }
         }
     }
